@@ -6,6 +6,29 @@ Team 뽀송한 태혁
 
 ## Project Tree
 
+```
+📦 Pposong-Hantaihe
+├─ .gitattributes
+├─ .github
+│  └─ CODEOWNERS
+├─ .gitignore
+├─ LICENSE
+├─ README.md
+├─ hantaihe
+│  └─ app.py
+├─ i4song
+│  └─ index.js
+├─ src
+│  └─ app.py
+├─ test
+│  └─ app.py
+└─ tools
+   ├─ baby-goat.PNG
+   ├─ post-generate-lyric.sh
+   ├─ pre-generate-lyric.sh
+   └─ song-lyrics.md
+```
+
 ## Contributors
 
 |<img alt="Yongwook Lee" src="https://avatars.githubusercontent.com/u/46441280?v=4" width="100"/> | <img alt="Taehyuk Han" src="https://avatars.githubusercontent.com/u/80453189?v=4" width="100"/> |
