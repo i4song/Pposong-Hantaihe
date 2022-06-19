@@ -30,7 +30,7 @@ Team 뽀송한 태혁
 ```
 
 ## Contributors
-	
+
 |<img alt="Yongwook Lee" src="https://avatars.githubusercontent.com/u/46441280?v=4" width="100"/> | <img alt="Taehyuk Han" src="https://avatars.githubusercontent.com/u/80453189?v=4" width="100"/> |
 |:-----:|:-----:|
 | [Yongwook Lee](https://github.com/i4song) | [Taehyuk Han](https://github.com/hantaihe)  |
