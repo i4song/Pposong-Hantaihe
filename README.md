@@ -7,26 +7,27 @@ Team 뽀송한 태혁
 ## Project Tree
 
 ```
-📦 Pposong-Hantaihe
-├─ .gitattributes
-├─ .github
-│  └─ CODEOWNERS
+📦 Assignment 3rd
 ├─ .gitignore
-├─ LICENSE
-├─ README.md
-├─ hantaihe
-│  └─ app.py
-├─ i4song
-│  └─ index.js
-├─ src
-│  └─ app.py
-├─ test
-│  └─ app.py
-└─ tools
-   ├─ baby-goat.PNG
-   ├─ post-generate-lyric.sh
-   ├─ pre-generate-lyric.sh
-   └─ song-lyrics.md
+├─ app.js
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ css
+│  │  ├─ checkout.css
+│  │  ├─ pricing.css
+│  │  └─ product.css
+│  └─ scripts
+│     ├─ checkout.js
+│     ├─ pricing.js
+│     └─ product.js
+├─ views
+│  ├─ checkout
+│  │  └─ index.html
+│  ├─ pricing
+│  │  └─ index.html
+│  └─ product
+│     └─ index.html
 ```
 
 ## Contributors
