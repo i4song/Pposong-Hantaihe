@@ -1,0 +1,37 @@
+name: Generate Black Circle
+on:
+  push:
+    branches:
+      - assignment-4th/hantaihe
+jobs:
+  build:
+    name: Generate Black Circle 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Download a black circle image
+        id: generating
+        run: |
+          cd ./hantaihe
+          chmod +x generate-black-circle.sh
+          ./generate-black-circle.sh
+          echo "::set-output name=result::$(./generate-black-circle.sh)"
+
+      - name: Check status
+        run: |
+          git status
+
+      - name: Add changed files
+        if: steps.generating.outputs.result != 'An image already exists'
+        run: |
+          git add .
+
+      - name: Commit and Push
+        if: steps.generating.outputs.result != 'An image already exists'
+        run: |
+          git config --local user.email "hantaihe@gmail.com"
+          git config --local user.name "hantaihe"
+          git commit -m "Add black_circle.png"
+          git push
