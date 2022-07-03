@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Download a black circle image
+        id: generating
         run: |
           cd ./hantaihe
           chmod +x generate-black-circle.sh
@@ -23,12 +24,12 @@ jobs:
           git status
 
       - name: Add changed files
-        if: steps.generating.outputs.test != 'An image already exists'
+        if: steps.generating.outputs.result != 'An image already exists'
         run: |
           git add .
 
       - name: Commit and Push
-        if: steps.generating.outputs.test != 'An image already exists'
+        if: steps.generating.outputs.result != 'An image already exists'
         run: |
           git config --local user.email "hantaihe@gmail.com"
           git config --local user.name "hantaihe"
