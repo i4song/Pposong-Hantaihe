@@ -16,16 +16,19 @@ jobs:
           cd ./hantaihe
           chmod +x generate-black-circle.sh
           ./generate-black-circle.sh
+          echo "::set-output name=result::$(./generate-black-circle.sh)"
 
       - name: Check status
         run: |
           git status
 
       - name: Add changed files
+        if: steps.generating.outputs.test != 'An image already exists'
         run: |
           git add .
 
       - name: Commit and Push
+        if: steps.generating.outputs.test != 'An image already exists'
         run: |
           git config --local user.email "hantaihe@gmail.com"
           git config --local user.name "hantaihe"
