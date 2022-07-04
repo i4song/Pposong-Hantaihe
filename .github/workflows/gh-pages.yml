@@ -14,23 +14,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
         with:
-          node-version: "12.x"
+          node-version: "18.x"
 
-      - run: cd i4song/adorable-css-sample
-
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - run: yarn
-      - run: yarn build
+      - run: cd i4song/adorable-css-sample & yarn
+      - run: cd i4song/adorable-css-sample & yarn build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./i4song/adorable-css-sample/dist
